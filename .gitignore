@@ -1,0 +1,75 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# === Distribution / packaging ===
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# === PyInstaller ===
+*.manifest
+*.spec
+
+# === Unit test / coverage ===
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# === Virtual environments ===
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# === IDEs ===
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# === AI editor configs ===
+.claude/
+.gemini/
+
+# === Generated Talon reports (outputs, not source) ===
+talon-report.json
+talon-report.md
+
+# === Talon PoC cache (fetched at runtime, not shipped) ===
+talon/data/poc/*.json
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini

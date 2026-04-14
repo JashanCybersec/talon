@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "talon"
+version = "1.0.0"
+description = "Fast CVE triage from service fingerprints — HTTP headers, banners, Nmap XML, and version strings."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [
+    { name = "Jasha" },
+]
+keywords = [
+    "cve", "vulnerability", "triage", "security", "pentest",
+    "nmap", "siem", "cve-scanner", "nvd", "osv", "kev",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: System :: Networking :: Monitoring",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "rich>=13.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/JashanCybersec/talon"
+Repository = "https://github.com/JashanCybersec/talon"
+"Bug Tracker" = "https://github.com/JashanCybersec/talon/issues"
+Changelog = "https://github.com/JashanCybersec/talon/blob/main/CHANGELOG.md"
+
+[project.scripts]
+talon = "talon.talon:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["talon*"]
+
+[tool.setuptools.package-data]
+talon = ["data/**/*"]
